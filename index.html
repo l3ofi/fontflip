@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css"/>
+    <script src="script.js" defer></script>
+    <title>FONTFLIP — Memory</title>
+</head>
+
+<body>
+    <!-- hier sind meine Knöpfe fürs Overlayfenster -->
+    <div class="overlay" id="startOverlay">
+        <button class="play">START</button>
+        <button class="close">&#x2715 CLOSE</button>
+    </div>
+
+    <!--
+    <h1 class="title">FONT<span class="flip-wrapper"><span class="title-flip">FLIP</span></span></h1>
+    -->
+
+    <!-- hier sind meine Knöpfe fürs Hauptfenster 
+    <div class="buttons"> 
+        <button class="shuffle">SHUFFLE</button>
+        <button class="pause">&#x23F8 PAUSE</button>
+    </div>
+    -->
+    
+    <div class="main">
+        <div class="top">
+            <h1>FONTFLIP</h1>
+            <div class="action">
+                <div class="timer">
+                    <span id="time">00.00</span>
+                </div>
+                <div class="top_buttons">
+                    <button class="shuffle">SHUFFLE</button>
+                    <button class="pause">&#x23F8 PAUSE</button>
+                </div>
+            </div>
+        </div>
+    <!-- hier sind meine 36 Memory-Karten -->
+        <div class="game">
+            <div class="grid-container">
+
+                <details class="card" data-pair="1"><summary></summary><img src="images/260207_f_pair_01.png" alt="Haas Unica Medium F"></details> 
+                <details class="card" data-pair="1"><summary></summary><img src="images/260207_f_pair_01.png" alt="Haas Unica Medium F"></details>
+                <details class="card" data-pair="2"><summary></summary><img src="images/260207_f_pair_02.png" alt="Benton SemiBold F"></details>
+                <details class="card" data-pair="2"><summary></summary><img src="images/260207_f_pair_02.png" alt="Benton SemiBold F"></details>
+                <details class="card" data-pair="3"><summary></summary><img src="images/260207_f_pair_03.png" alt="DejaVu Serif Bold F"></details>
+                <details class="card" data-pair="3"><summary></summary><img src="images/260207_f_pair_03.png" alt="DejaVu Serif Bold F"></details> 
+                <details class="card" data-pair="4"><summary></summary><img src="images/260207_f_pair_04.png" alt="Noto Naskh Arabic Bold F"></details>
+                <details class="card" data-pair="4"><summary></summary><img src="images/260207_f_pair_04.png" alt="Noto Naskh Arabic Bold F"></details>
+                <details class="card" data-pair="5"><summary></summary><img src="images/260207_f_pair_05.png" alt="Hansson Stencil MN Regular F"></details>
+                <details class="card" data-pair="5"><summary></summary><img src="images/260207_f_pair_05.png" alt="Hansson Stencil MN Regular F"></details>
+                <details class="card" data-pair="6"><summary></summary><img src="images/260207_f_pair_06.png" alt="Trebuchet MS Regular F"></details>
+                <details class="card" data-pair="6"><summary></summary><img src="images/260207_f_pair_06.png" alt="Trebuchet MS Regular F"></details>
+
+                <details class="card" data-pair="7"><summary></summary><img src="images/260207_f_pair_07.png" alt="Buchstabe F der Elevon ThreeG"></details>
+                <details class="card" data-pair="7"><summary></summary><img src="images/260207_f_pair_07.png" alt="Buchstabe F der Elevon ThreeG"></details>
+                <details class="card" data-pair="8"><summary></summary><img src="images/260207_f_pair_08.png" alt="Buchstabe F der Impact Regular"></details>
+                <details class="card" data-pair="8"><summary></summary><img src="images/260207_f_pair_08.png" alt="Buchstabe F der Impact Regular"></details>
+                <details class="card" data-pair="9"><summary></summary><img src="images/260207_f_pair_09.png" alt="Buchstabe F der Comic Sans Regular"></details>
+                <details class="card" data-pair="9"><summary></summary><img src="images/260207_f_pair_09.png" alt="Buchstabe F der Comic Sans Regular"></details>
+                <details class="card" data-pair="10"><summary></summary><img src="images/260207_f_pair_10.png" alt="Buchstabe F der Courier New Regular"></details>
+                <details class="card" data-pair="10"><summary></summary><img src="images/260207_f_pair_10.png" alt="Buchstabe F der Courier New Regular"></details>
+                <details class="card" data-pair="11"><summary></summary><img src="images/260207_f_pair_11.png" alt="Buchstabe F der Rubik Regular"></details>
+                <details class="card" data-pair="11"><summary></summary><img src="images/260207_f_pair_11.png" alt="Buchstabe F der Rubik Regular"></details>
+                <details class="card" data-pair="12"><summary></summary><img src="images/260207_f_pair_12.png" alt="Buchstabe F der Roboto Mono Regular"></details>
+                <details class="card" data-pair="12"><summary></summary><img src="images/260207_f_pair_12.png" alt="Buchstabe F der Roboto Mono Regular"></details>
+
+                <details class="card" data-pair="13"><summary></summary><img src="images/260207_f_pair_13.png" alt="Buchstabe F der Noto Naskh Arabic Regular"></details>
+                <details class="card" data-pair="13"><summary></summary><img src="images/260207_f_pair_13.png" alt="Buchstabe F der Noto Naskh Arabic Regular"></details>
+                <details class="card" data-pair="14"><summary></summary><img src="images/260207_f_pair_14.png" alt="Buchstabe F der The Seasons Regular"></details>
+                <details class="card" data-pair="14"><summary></summary><img src="images/260207_f_pair_14.png" alt="Buchstabe F der The Seasons Regular"></details>
+                <details class="card" data-pair="15"><summary></summary><img src="images/260207_f_pair_15.png" alt="Buchstabe F der Times New Roman Regular"></details>
+                <details class="card" data-pair="15"><summary></summary><img src="images/260207_f_pair_15.png" alt="Buchstabe F der Times New Roman Regular"></details>
+                <details class="card" data-pair="16"><summary></summary><img src="images/260207_f_pair_16.png" alt="Buchstabe F der Alef Regular"></details>
+                <details class="card" data-pair="16"><summary></summary><img src="images/260207_f_pair_16.png" alt="Buchstabe F der Alef Regular"></details>
+                <details class="card" data-pair="17"><summary></summary><img src="images/260207_f_pair_17.png" alt="Buchstabe F der Warbler Banner Regular"></details>
+                <details class="card" data-pair="17"><summary></summary><img src="images/260207_f_pair_17.png" alt="Buchstabe F der Warbler Banner Regular"></details>
+                <details class="card" data-pair="18"><summary></summary><img src="images/260207_f_pair_18.png" alt="Buchstabe F der Bebas Neue Book"></details>
+                <details class="card" data-pair="18"><summary></summary><img src="images/260207_f_pair_18.png" alt="Buchstabe F der Bebas Neue Book"></details>
+
+                <details class="card" data-pair="19"><summary></summary><img src="images/260207_f_pair_19.png" alt="Buchstabe F der Gunter Regular"></details>
+                <details class="card" data-pair="19"><summary></summary><img src="images/260207_f_pair_19.png" alt="Buchstabe F der Gunter Regular"></details>
+                <details class="card" data-pair="20"><summary></summary><img src="images/260207_f_pair_20.png" alt="Buchstabe F der Fit Regular"></details>
+                <details class="card" data-pair="20"><summary></summary><img src="images/260207_f_pair_20.png" alt="Buchstabe F der Fit Regular"></details>
+                <details class="card" data-pair="21"><summary></summary><img src="images/260207_f_pair_21.png" alt="Buchstabe F der Kit Rounded Regular"></details>
+                <details class="card" data-pair="21"><summary></summary><img src="images/260207_f_pair_21.png" alt="Buchstabe F der Kit Rounded Regular"></details>
+                <details class="card" data-pair="22"><summary></summary><img src="images/260207_f_pair_22.png" alt="Buchstabe F der Gelato Luxe Regular"></details>
+                <details class="card" data-pair="22"><summary></summary><img src="images/260207_f_pair_22.png" alt="Buchstabe F der Gelato Luxe Regular"></details>
+                <details class="card" data-pair="23"><summary></summary><img src="images/260207_f_pair_23.png" alt="Buchstabe F der BD Brick 2007 Regular"></details>
+                <details class="card" data-pair="23"><summary></summary><img src="images/260207_f_pair_23.png" alt="Buchstabe F der BD Brick 2007 Regular"></details>
+                <details class="card" data-pair="24"><summary></summary><img src="images/260207_f_pair_24.png" alt="Buchstabe F der Duper Regular"></details>
+                <details class="card" data-pair="24"><summary></summary><img src="images/260207_f_pair_24.png" alt="Buchstabe F der Duper Regular"></details>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>[LEOPOLD FISCHER — l3o_fi]</p>
+            <p>[WINTERSEMESTER 2025—26]</p>
+        </div>
+    </div>
+
+    <div class="shuffle-overlay" id="shuffleOverlay">
+        <div class="shuffle-box">
+            <span>SHUFFLING ...</span>
+            <div class="loader">
+            <div class="loader-bar"></div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
