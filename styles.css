@@ -433,6 +433,7 @@ html, body {
 }
 
 .timer {
+    /*font-size: 2em;*/
     font-size: 3em;
     margin-right: 25px;
 }
