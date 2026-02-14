@@ -4,6 +4,17 @@ let timerRunning = false;
 let isPaused = false;
 let pauseTime = 0;
 
+function updateTimer() {
+  const elapsed = Math.floor((Date.now() - startTime) / 1000);
+
+  const minutes = Math.floor(elapsed / 60);
+  const seconds = elapsed % 60;
+
+  timeDisplay.textContent =
+    String(minutes).padStart(2, "0") +
+    "." +
+    String(seconds).padStart(2, "0");
+}
 
 
 const timeDisplay = document.getElementById("time");
@@ -82,19 +93,6 @@ if (!timerRunning) {
   startTime = Date.now();
   timer = setInterval(updateTimer, 100);
 }
-
-function updateTimer() {
-  const elapsed = Math.floor((Date.now() - startTime) / 1000);
-
-  const minutes = Math.floor(elapsed / 60);
-  const seconds = elapsed % 60;
-
-  timeDisplay.textContent =
-    String(minutes).padStart(2, "0") +
-    "." +
-    String(seconds).padStart(2, "0");
-}
-
 
 
 
