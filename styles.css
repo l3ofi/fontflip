@@ -83,8 +83,8 @@ html, body {
 
 
 .main {
-    padding: 50px;
-    max-width: 2000px;
+    padding: 5rem;
+    /*max-width: 2000px;*/
 }
 
 .top {
@@ -322,7 +322,7 @@ html, body {
 
 
 .game {
-    max-width: 2000px;
+    /*max-width: 2000px;*/
 }
 
 .grid-container {
@@ -330,7 +330,7 @@ html, body {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     /*grid-template-rows: repeat(4, 1fr);*/
     gap: 15px;
-    max-width: 2000px;
+    /*max-width: 2000px;*/
 }
 
 .card {
@@ -343,6 +343,7 @@ html, body {
     border: 3px solid rgb(0, 0, 0);
     background-image: url(images/260207_card_back_02.png);
     cursor: pointer;
+    background-size: contain;
 }
 
 .card img {
@@ -357,6 +358,7 @@ html, body {
 .card:hover {
     background-image: url(images/260207_card_back_hover_02.png);
     box-shadow: rgb(0, 0, 0) 5px 5px 0 0;
+    background-size: contain;
 }
 
 .card summary {
@@ -412,7 +414,6 @@ html, body {
 /*----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------*/
 /*----------------------------------------------------------------------------------------------------------------------*/
-
 
 
 @media (max-width: 1350px) {
