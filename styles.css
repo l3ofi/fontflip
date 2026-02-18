@@ -321,9 +321,9 @@ html, body {
 
 
 
-.game {
-    /*max-width: 2000px;*/
-}
+/*.game {
+    max-width: 2000px;
+}*/
 
 .grid-container {
     display: grid;
